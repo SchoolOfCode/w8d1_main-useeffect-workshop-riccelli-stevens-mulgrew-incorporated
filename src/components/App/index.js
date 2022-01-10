@@ -7,16 +7,21 @@ function App() {
   const [id, setId] = useState();
 
   function handleClick() {
-    // TODO: Set id to be random number between 1 and 151
-    setId(151);
+    // TODO: Set id to be random number between 1 and 151 - DONE
+    console.log("Handclick is being executed")
+    const randInt = Math.floor(Math.random() * 151) + 1;
+
+    // return Math.floor(Math.random()*(max-min+1)+min);
+
+    setId(randInt);
   }
 
   return (
     <div className="App">
       {/* TODO: call handleClick when button clicked */}
-      <button>Get Random Pokemon</button>
+      <button onClick={handleClick}>Get Random Pokemon</button>
       {/* TODO: hand down id as a prop */}
-      <PokemonViewer />
+      <PokemonViewer id={id}/>
     </div>
   );
 }
