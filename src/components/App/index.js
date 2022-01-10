@@ -6,6 +6,7 @@ import PokemonViewer from "../PokemonViewer";
 function App() {
   const [id, setId] = useState();
 
+
   function handleClick() {
     // TODO: Set id to be random number between 1 and 151 - DONE
     console.log("Handclick is being executed")
